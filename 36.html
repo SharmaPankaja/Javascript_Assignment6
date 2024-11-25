@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="txt">Enter a number: </label>
+    <input type="text" id="txt">
+    <button onclick="square()">Calculate Square</button>
+    <p id="para"></p>
+
+</body>
+
+</html>
+
+<script>
+    function square() {
+        var textValue = document.getElementById('txt').value;
+        var number = parseFloat(textValue);
+
+        if (!isNaN(number)) {
+            var square = Math.pow(number, 2);
+            document.getElementById('para').innerText = "The square of " + number + " is " + square;
+        } else {
+            document.getElementById('para').innerText = "Only number allowed..";
+        }
+    }
+</script>

@@ -1,0 +1,15 @@
+<p id="arr"></p>
+<button onclick="remove()">Remove last element</button>
+<p id="removed"></p>
+
+<script>
+    var numbers = [5, 10, 15,20,25];
+    document.getElementById("arr").innerHTML=numbers;
+
+    function remove()
+    {
+        numbers.shift();
+
+        document.getElementById("removed").innerHTML=numbers
+    }
+</script>

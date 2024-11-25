@@ -1,0 +1,15 @@
+<p id="arr"></p>
+<button onclick="add()">Add 10 at end</button>
+<p id="added"></p>
+
+<script>
+    var numbers = [5, 10, 15];
+    document.getElementById("arr").innerHTML=numbers;
+
+    function add()
+    {
+        numbers.push(10);
+
+        document.getElementById("added").innerHTML=numbers
+    }
+</script>

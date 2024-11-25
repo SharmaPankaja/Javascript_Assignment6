@@ -1,0 +1,21 @@
+<label for="emailInput">Enter your email: </label>
+<input type="text" id="emailInput" placeholder="example@example.com">
+<button onclick="validateEmail()">Validate</button>
+
+<p id="result"></p>
+
+<script>
+   
+    function validateEmail() {
+        var email = document.getElementById('emailInput').value;
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (emailPattern.test(email)) {
+            document.getElementById('result').innerText = "Valid email address.";
+            document.getElementById('result').style.color = "green"; 
+        } else {
+            document.getElementById('result').innerText = "Invalid email address. Please enter a valid email.";
+            document.getElementById('result').style.color = "red";
+        }
+    }
+</script>
